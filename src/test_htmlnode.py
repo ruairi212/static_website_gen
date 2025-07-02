@@ -13,3 +13,6 @@ class TestHTMLNode(unittest.TestCase):
                 ' href="https://www.google.com" target="_blank"'
             
         )
+    def test_props_to_html_no_props(self):
+        node = HTMLNode(tag="p", value="Hello")
+        self.assertEqual(node.props_to_html(), "")
